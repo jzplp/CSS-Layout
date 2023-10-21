@@ -24,6 +24,11 @@ const menus: Array<Menu> = [
     name: '左右比例布局',
     desc: '使用flex, 上下比例布局也是同理',
     path: 'flex/ScaleRow'
+  },
+  {
+    name: '圣杯布局',
+    desc: '左右三栏布局，使用浮动和相对定位',
+    path: 'holyGrail/holyGrail'
   }
 ]
 
