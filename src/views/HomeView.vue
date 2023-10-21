@@ -18,7 +18,12 @@ const menus: Array<Menu> = [
   {
     name: '上下左右三栏混合布局',
     desc: '使用flex',
-    path: 'flex/multiRowColumn'
+    path: 'flex/MultiRowColumn'
+  },
+  {
+    name: '左右比例布局',
+    desc: '使用flex, 上下比例布局也是同理',
+    path: 'flex/ScaleRow'
   }
 ]
 
