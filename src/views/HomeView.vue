@@ -7,6 +7,16 @@ const router = useRouter()
 const menus: Array<Menu> = [
   {
     name: '左右三栏布局',
+    desc: 'float和计算calc',
+    path: 'calc/ThreeRow'
+  },
+  {
+    name: '上下三栏布局',
+    desc: '计算calc',
+    path: 'calc/ThreeColumn'
+  },
+  {
+    name: '左右三栏布局',
     desc: '使用flex',
     path: 'flex/ThreeRow'
   },
