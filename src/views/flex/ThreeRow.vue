@@ -1,3 +1,4 @@
+<!-- 左右三栏布局 -->
 <template>
   <div class="whole-page container">
     <div class="left">左侧</div>
@@ -13,7 +14,6 @@
 }
 .container {
   display: flex;
-  
   .left {
     width: 400px;
     background-color: pink;

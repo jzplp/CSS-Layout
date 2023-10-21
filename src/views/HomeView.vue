@@ -14,6 +14,11 @@ const menus: Array<Menu> = [
     name: '上下三栏布局',
     desc: '使用flex',
     path: 'flex/ThreeColumn'
+  },
+  {
+    name: '上下左右三栏混合布局',
+    desc: '使用flex',
+    path: 'flex/multiRowColumn'
   }
 ]
 
@@ -24,7 +29,7 @@ function clickMenu(item: Menu) {
 </script>
 
 <template>
-  <div>
+  <div class="menu-container">
     <div v-for="item in menus" :key="item.path" class="menu">
         <div class="menuTitle" @click="clickMenu(item)"> {{ item.name }} </div>
         <div> {{ item.desc || '-' }} </div>
@@ -33,6 +38,9 @@ function clickMenu(item: Menu) {
 </template>
 
 <style>
+.menu-container {
+  display: flex;
+}
 .menu {
   margin: 10px;
 }

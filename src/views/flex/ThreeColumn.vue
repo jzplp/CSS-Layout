@@ -1,8 +1,9 @@
+<!-- 上下三栏布局 -->
 <template>
   <div class="whole-page container">
-    <div class="left">左侧</div>
+    <div class="top">上面</div>
     <div class="middle">中间</div>
-    <div class="right">右侧</div>
+    <div class="bottom">下面</div>
   </div>
 </template>
 
@@ -14,11 +15,11 @@
 .container {
   display: flex;
   flex-direction: column;
-  .left {
+  .top {
     height: 300px;
     background-color: pink;
   }
-  .right {
+  .bottom {
     height: 200px;
     background-color: green;
   }
