@@ -13,13 +13,13 @@
 }
 .container {
   display: flex;
-  flex-direction: column;
+  
   .left {
-    height: 300px;
+    width: 400px;
     background-color: pink;
   }
   .right {
-    height: 200px;
+    width: 300px;
     background-color: green;
   }
   .middle {

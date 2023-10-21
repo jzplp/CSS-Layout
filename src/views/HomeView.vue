@@ -8,6 +8,11 @@ const menus: Array<Menu> = [
   {
     name: '左右三栏布局',
     desc: '使用flex',
+    path: 'flex/ThreeRow'
+  },
+  {
+    name: '上下三栏布局',
+    desc: '使用flex',
     path: 'flex/ThreeColumn'
   }
 ]
