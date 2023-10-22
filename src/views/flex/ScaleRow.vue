@@ -48,7 +48,7 @@
     background-color: green;
   }
   .left2 {
-    flex: 1;
+    flex-grow: 1;
     background-color: pink;
   }
   .right2 {
@@ -56,15 +56,15 @@
     background-color: green;
   }
   .left3 {
-    flex: 1;
+    flex-grow: 1;
     background-color: pink;
   }
   .right3 {
-    flex: 1;
+    flex-grow: 1;
     background-color: green;
   }
   .left4 {
-    flex: 1;
+    flex-grow: 1;
     background-color: pink;
   }
   .right4 {

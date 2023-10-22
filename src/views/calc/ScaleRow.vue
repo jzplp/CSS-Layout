@@ -16,6 +16,7 @@
     <div class="column1">第一栏 width: 30%</div>
     <div class="column2">第二栏 撑开剩余空间 </div>
     <div class="column3">第三栏 width: 200px</div>
+    <div class="column4">第四栏 width: 100px</div>
   </div>
 </template>
 
@@ -68,7 +69,7 @@
     background-color: pink;
   }
   .column2 {
-    width: calc(100% - 30% - 200px);
+    width: calc(100% - 30% - 200px - 100px);
     height: 100%;
     float: left;
     background-color: green;
@@ -78,6 +79,12 @@
     float: left;
     width: 200px;
     background-color: yellow;
+  }
+  .column4 {
+    height: 100%;
+    float: left;
+    width: 100px;
+    background-color: grey;
   }
 }
 </style>

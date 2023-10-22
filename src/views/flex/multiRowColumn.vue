@@ -1,4 +1,4 @@
-<!-- 上下左右三栏混合布局 -->
+<!-- 上下左右三栏嵌套布局 -->
 <template>
   <div class="whole-page container">
     <div class="top">上面</div>
@@ -28,7 +28,7 @@
     background-color: green;
   }
   .middle {
-    flex: 1;
+    flex-grow: 1;
     display: flex;
     .left {
       width: 400px;
@@ -39,7 +39,7 @@
       background-color: aqua;
     }
     .middle-deep {
-      flex: 1;
+      flex-grow: 1;
       background-color: yellow;
     }
   }

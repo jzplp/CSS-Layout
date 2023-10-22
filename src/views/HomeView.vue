@@ -16,7 +16,7 @@ const menus: Array<Menu> = [
     path: 'calc/ThreeColumn'
   },
   {
-    name: '上下左右三栏混合布局',
+    name: '上下左右三栏嵌套布局',
     desc: 'float和计算calc',
     path: 'calc/MultiRowColumn'
   },
@@ -36,7 +36,7 @@ const menus: Array<Menu> = [
     path: 'flex/ThreeColumn'
   },
   {
-    name: '上下左右三栏混合布局',
+    name: '上下左右三栏嵌套布局',
     desc: '使用flex',
     path: 'flex/MultiRowColumn'
   },

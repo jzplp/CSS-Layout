@@ -1,4 +1,4 @@
-<!-- 上下三栏布局 -->
+<!-- 上下左右三栏嵌套布局 -->
 <template>
   <div class="whole-page container">
     <div class="top">上面</div>
@@ -30,7 +30,7 @@
     background-color: green;
   }
   .middle {
-    height: calc(100% - 500px);
+    height: calc(100% - var(--top-value) - var(--bottom-value));
     .left {
       width: 400px;
       background-color: grey;
@@ -44,7 +44,7 @@
       float: left;
     }
     .middle-deep {
-      width: calc(100% - 700px);
+      width: calc(100% - var(--left-value) - var(--right-value));
       background-color: yellow;
       height: 100%;
       float: left;
