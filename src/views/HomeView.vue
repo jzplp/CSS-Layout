@@ -78,6 +78,11 @@ const menuGroups: Array<MenuGroup> = [
         name: '上下左右三栏网格布局',
         desc: 'grid网格',
         path: 'grid/MultiRowColumnGrid'
+      },
+      {
+        name: '左右比例多栏布局',
+        desc: '上下比例布局也是同理',
+        path: 'grid/ScaleRow'
       }
     ]
   },
@@ -126,8 +131,8 @@ function clickSource(item: Menu) {
   margin: 10px;
 }
 .page-title {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 .group-title {
