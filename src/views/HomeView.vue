@@ -1,54 +1,95 @@
 <script setup lang="ts">
-import type { Menu } from '@/types/menus'
+import type { Menu, MenuGroup } from '@/types/menus'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
+const sourcesPathPrefix = 'https://github.com/jzplp/CSS-Layout/tree/main/src/views/'
 
-const menus: Array<Menu> = [
+const menuGroups: Array<MenuGroup> = [
   {
-    name: '左右三栏布局',
-    desc: 'float和计算calc',
-    path: 'calc/ThreeRow'
+    name: '计算calc布局',
+    menus: [
+      {
+        name: '左右三栏布局',
+        desc: '使用float',
+        path: 'calc/ThreeRow'
+      },
+      {
+        name: '上下三栏布局',
+        desc: '',
+        path: 'calc/ThreeColumn'
+      },
+      {
+        name: '上下左右三栏嵌套布局',
+        desc: '使用float',
+        path: 'calc/MultiRowColumn'
+      },
+      {
+        name: '左右比例多栏布局',
+        desc: '使用float。上下布局类似，但不需要float',
+        path: 'calc/ScaleRow'
+      }
+    ]
   },
   {
-    name: '上下三栏布局',
-    desc: '计算calc',
-    path: 'calc/ThreeColumn'
+    name: 'flex布局',
+    menus: [
+      {
+        name: '左右三栏布局',
+        desc: '',
+        path: 'flex/ThreeRow'
+      },
+      {
+        name: '上下三栏布局',
+        desc: '',
+        path: 'flex/ThreeColumn'
+      },
+      {
+        name: '上下左右三栏嵌套布局',
+        desc: '',
+        path: 'flex/MultiRowColumn'
+      },
+      {
+        name: '左右比例多栏布局',
+        desc: '上下比例布局也是同理',
+        path: 'flex/ScaleRow'
+      }
+    ]
   },
   {
-    name: '上下左右三栏嵌套布局',
-    desc: 'float和计算calc',
-    path: 'calc/MultiRowColumn'
+    name: 'grid布局',
+    menus: [
+      {
+        name: '左右三栏布局',
+        desc: '',
+        path: 'grid/ThreeRow'
+      },
+      {
+        name: '上下三栏布局',
+        desc: '',
+        path: 'grid/ThreeColumn'
+      },
+      {
+        name: '上下左右三栏嵌套布局',
+        desc: 'grid嵌套',
+        path: 'grid/MultiRowColumnNest'
+      },
+      {
+        name: '上下左右三栏网格布局',
+        desc: 'grid网格',
+        path: 'grid/MultiRowColumnGrid'
+      }
+    ]
   },
   {
-    name: '左右比例多栏布局',
-    desc: 'float和计算calc。上下比例布局类似，但不需要float',
-    path: 'calc/ScaleRow'
-  },
-  {
-    name: '左右三栏布局',
-    desc: '使用flex',
-    path: 'flex/ThreeRow'
-  },
-  {
-    name: '上下三栏布局',
-    desc: '使用flex',
-    path: 'flex/ThreeColumn'
-  },
-  {
-    name: '上下左右三栏嵌套布局',
-    desc: '使用flex',
-    path: 'flex/MultiRowColumn'
-  },
-  {
-    name: '左右比例多栏布局',
-    desc: '使用flex, 上下比例布局也是同理',
-    path: 'flex/ScaleRow'
-  },
-  {
-    name: '圣杯布局',
-    desc: '左右三栏布局，使用浮动和相对定位',
-    path: 'holyGrail/holyGrail'
+    name: '经典布局',
+    menus: [
+      {
+        name: '圣杯布局',
+        desc: '左右三栏布局，使用浮动和相对定位',
+        path: 'holyGrail/holyGrail'
+      }
+    ]
   }
 ]
 
@@ -56,27 +97,61 @@ function clickMenu(item: Menu) {
   router.push(item.path)
 }
 
+function clickSource(item: Menu) {
+  window.open(sourcesPathPrefix + item.path + '.vue')
+}
 </script>
 
 <template>
-  <div class="menu-container">
-    <div v-for="item in menus" :key="item.path" class="menu">
-        <div class="menuTitle" @click="clickMenu(item)"> {{ item.name }} </div>
-        <div> {{ item.desc || '-' }} </div>
+  <div class="page-container">
+    <div class="page-title">CSS-Layout 各种CSS页面内布局实例</div>
+    <div v-for="group in menuGroups" :key="group.name">
+      <div class="group-title"> {{ group.name }} </div>
+      <div class="menu-container" >
+        <div v-for="item in group.menus" :key="item.path" class="menu">
+          <div class="menu-title link" @click="clickMenu(item)">{{ item.name }}</div>
+          <div class="menu-desc">{{ item.desc || '-' }}</div>
+          <div>
+            <span class="link" style="margin-right: 4px" @click="clickMenu(item)">查看效果</span>
+            <span class="link" @click="clickSource(item)">查看源码</span>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </template>
 
-<style>
-.menu-container {
-  display: flex;
-}
-.menu {
+<style scoped>
+.page-container {
   margin: 10px;
 }
-.menuTitle {
+.page-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.group-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.link {
   color: blue;
-  text-decoration: underline;
-  cursor:pointer;
+  cursor: pointer;
+}
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  margin-bottom: 12px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.menu {
+  .menu-title {
+    font-weight: 600;
+  }
+  .menu-desc {
+    color: grey;
+  }
 }
 </style>

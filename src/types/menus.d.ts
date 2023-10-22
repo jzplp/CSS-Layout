@@ -3,3 +3,9 @@ export interface Menu {
   desc?: string
   path: string
 }
+
+export interface MenuGroup {
+  name: string
+  desc?: string
+  menus: Array<Menu>
+}
