@@ -16,6 +16,16 @@ const menus: Array<Menu> = [
     path: 'calc/ThreeColumn'
   },
   {
+    name: '上下左右三栏混合布局',
+    desc: 'float和计算calc',
+    path: 'calc/MultiRowColumn'
+  },
+  {
+    name: '左右比例多栏布局',
+    desc: 'float和计算calc。上下比例布局类似，但不需要float',
+    path: 'calc/ScaleRow'
+  },
+  {
     name: '左右三栏布局',
     desc: '使用flex',
     path: 'flex/ThreeRow'
@@ -31,7 +41,7 @@ const menus: Array<Menu> = [
     path: 'flex/MultiRowColumn'
   },
   {
-    name: '左右比例布局',
+    name: '左右比例多栏布局',
     desc: '使用flex, 上下比例布局也是同理',
     path: 'flex/ScaleRow'
   },

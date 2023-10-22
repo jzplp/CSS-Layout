@@ -1,4 +1,4 @@
-<!-- 左右比例布局 -->
+<!-- 左右比例多栏布局 -->
 <template>
   <div class="part-page container">
     <div class="left1">左侧</div>
