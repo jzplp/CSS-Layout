@@ -12,22 +12,24 @@
   height: 100vh;
 }
 .container {
-  padding: 0 300px 0 400px;
+  --left-value: 400px;
+  --right-value: 300px;
+  padding: 0 var(--right-value) 0 var(--left-value);
   .left {
     float: left;
     position: relative;
-    left: -400px;
-    width: 400px;
+    left: calc(-1 * var(--left-value));
+    width: var(--left-value);
     background-color: pink;
     height: 100%;
     margin-left: -100%;
   }
   .right {
     float: left;
-    width: 300px;
+    width: var(--right-value);
     background-color: green;
     height: 100%;
-    margin-right: -300px;
+    margin-right: calc(-1 * var(--right-value));
   }
   .middle {
     float: left;
