@@ -36,8 +36,8 @@
     height: 100%;
     width: 100%;
     .inner {
-      padding-left: var(--left-value);
-      padding-right: var(--right-value);
+      margin-left: var(--left-value);
+      margin-right: var(--right-value);
       height: 100%;
     }
   }
