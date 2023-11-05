@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .part-page {
   height: 80px;
   margin-bottom: 10px;

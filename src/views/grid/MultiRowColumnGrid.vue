@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .whole-page {
   height: 100vh;
   width: 100vw;

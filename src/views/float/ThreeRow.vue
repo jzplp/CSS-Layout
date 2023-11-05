@@ -13,18 +13,26 @@
   width: 100vw;
 }
 .container {
-  display: flex;
   .left {
+    float: left;
     width: 400px;
+    height: 100%;
     background-color: pink;
   }
   .right {
+    float: left;
     width: 300px;
+    height: 100%;
     background-color: green;
   }
   .middle {
-    flex:1;
+    float: left;
+    height: 100%;
     background-color: yellow;
+    width: 100%;
+    margin-left: 400px;
+    margin-right: 300px;
   }
 }
+
 </style>

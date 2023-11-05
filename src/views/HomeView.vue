@@ -146,7 +146,7 @@ function clickSource(item: Menu) {
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .page-container {
   margin: 10px;
 }
