@@ -1,8 +1,7 @@
-<!-- 左右三栏布局 -->
+<!-- 左右两栏布局 -->
 <template>
   <div class="whole-page container">
     <div class="left">左侧</div>
-    <div class="middle">中间</div>
     <div class="right">右侧</div>
   </div>
 </template>
@@ -20,19 +19,10 @@
     background-color: pink;
   }
   .right {
-    float: left;
-    width: 300px;
-    height: 100%;
-    background-color: green;
-  }
-  .middle {
-    float: left;
     height: 100%;
     background-color: yellow;
-    width: 100%;
     margin-left: 400px;
-    margin-right: 300px;
+    width: 100%;
   }
 }
-
 </style>

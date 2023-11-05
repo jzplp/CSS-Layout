@@ -87,6 +87,16 @@ const menuGroups: Array<MenuGroup> = [
     ]
   },
   {
+    name: '浮动布局',
+    menus: [
+      {
+        name: '左右两栏布局',
+        desc: '',
+        path: 'float/TwoRow'
+      }
+    ]
+  },
+  {
     name: '圣杯布局',
     menus: [
       {
@@ -115,7 +125,7 @@ const menuGroups: Array<MenuGroup> = [
         path: 'flyingSwing/MultiRowColumn'
       }
     ]
-  }
+  },
 ]
 
 function clickMenu(item: Menu) {
