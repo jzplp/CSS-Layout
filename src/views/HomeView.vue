@@ -92,13 +92,23 @@ const menuGroups: Array<MenuGroup> = [
       {
         name: '左右三栏布局',
         desc: '使用浮动，相对定位和负margin',
-        path: 'holyGrail/holyGrail'
+        path: 'holyGrail/HolyGrail'
       },
       {
         name: '上下左右三栏嵌套布局',
         desc: '上下三栏使用计算calc',
         path: 'holyGrail/MultiRowColumn'
       }
+    ]
+  },
+  {
+    name: '双飞翼布局',
+    menus: [
+      {
+        name: '左右三栏布局',
+        desc: '',
+        path: 'flyingSwing/FlyingSwing'
+      },
     ]
   }
 ]
@@ -116,8 +126,8 @@ function clickSource(item: Menu) {
   <div class="page-container">
     <div class="page-title">CSS-Layout 各种CSS页面内布局实例</div>
     <div v-for="group in menuGroups" :key="group.name">
-      <div class="group-title"> {{ group.name }} </div>
-      <div class="menu-container" >
+      <div class="group-title">{{ group.name }}</div>
+      <div class="menu-container">
         <div v-for="item in group.menus" :key="item.path" class="menu">
           <div class="menu-title link" @click="clickMenu(item)">{{ item.name }}</div>
           <div class="menu-desc">{{ item.desc || '-' }}</div>
