@@ -180,8 +180,10 @@ function clickSource(item: Menu) {
   margin-bottom: 12px;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
 }
 .menu {
+  border-right: 1px solid grey;
   .menu-title {
     font-weight: 600;
   }
